@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">FinalApp</string>
-    <string name="question_infinityStones">How many Infinity Stones are there?</string>
-    <string name="question_CantGoBad">What is the only food that cannot go bad?</string>
-    <string name="question_ReneMagritte">Which was René Magritte’s first surrealist painting?</string>
-    <string name="question_90BoyBand">What 90s boy band member bought Myspace in 2011?</string>
-</resources>
