@@ -19,14 +19,16 @@ class TrueOrFalseActivity: AppCompatActivity() {
     private lateinit var txtTick: TextView
 
     private val questionList = listOf<TrueOrFalseQuestion>(
-        TrueOrFalseQuestion("Seahorses have stomachs for the absorption of nutrients from food", false),
+        TrueOrFalseQuestion("Caesar Salad originates from Italy.", false),
         TrueOrFalseQuestion("The letter H is between letters G and J on a keyboard", true),
-        TrueOrFalseQuestion("Camels have three sets of eyelashes", true),
-        TrueOrFalseQuestion("There are five zeros in one hundred thousand", true),
+        TrueOrFalseQuestion("Marvel published its first comic in October 1939.", true),
+        TrueOrFalseQuestion("China has the longest coastline in the world.", false),
         TrueOrFalseQuestion("If you add the two numbers on the opposite sides of dice together, the answer is always 7", true),
         TrueOrFalseQuestion("The deepest part of the ocean is about 36,200 feet down (11,030 m) which is more like 25 Empire State Buildings", true),
-        TrueOrFalseQuestion("It takes a sloth two weeks to digest its food.", true),
-        TrueOrFalseQuestion("A group of jellyfish is not a herd, or a school, or a flock; it's called a smack.", true)
+        TrueOrFalseQuestion("The Atlantic Ocean is the biggest ocean on Earth.", false),
+        TrueOrFalseQuestion("A group of jellyfish is not a herd, or a school, or a flock; it's called a smack.", true),
+        TrueOrFalseQuestion("Bananas grow upside down.", true),
+        TrueOrFalseQuestion("Toy Story was Pixar’s first movie.", true),
     )
 
     private var currentIndex = 0

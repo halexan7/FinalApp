@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
-
 class MultipleRadioButtons: AppCompatActivity() {
 
     lateinit var db: SQLiteDatabase
@@ -34,11 +33,12 @@ class MultipleRadioButtons: AppCompatActivity() {
         MultipleChoiceAnswers("Honey", true)
     )
 
+//    What is the highest-grossing video game franchise to date?
     val list3 = mutableListOf<MultipleChoiceAnswers>(
-        MultipleChoiceAnswers("Not to Be Reproduced", false),
-        MultipleChoiceAnswers("Personal Values", false),
-        MultipleChoiceAnswers("The Lovers", false),
-        MultipleChoiceAnswers("The Lost Jockey", true)
+        MultipleChoiceAnswers("Mario", false),
+        MultipleChoiceAnswers("Pokemon", true),
+        MultipleChoiceAnswers("Call of Duty", false),
+        MultipleChoiceAnswers("Street Fighter", false)
     )
 
     val list4 = mutableListOf<MultipleChoiceAnswers>(
@@ -48,11 +48,70 @@ class MultipleRadioButtons: AppCompatActivity() {
         MultipleChoiceAnswers("AJ McLean", false)
     )
 
+
+
+//    What is the most visited tourist attraction in the world?
+    val list5 = mutableListOf<MultipleChoiceAnswers>(
+        MultipleChoiceAnswers("Eiffel Tower", true),
+        MultipleChoiceAnswers("Statue of Liberty", false),
+        MultipleChoiceAnswers("Great Wall of China", false),
+        MultipleChoiceAnswers("Colosseum", false)
+    )
+
+
+//    What’s the heaviest organ in the human body?
+    val list6 = mutableListOf<MultipleChoiceAnswers>(
+        MultipleChoiceAnswers("Brain", false),
+        MultipleChoiceAnswers("Liver", true),
+        MultipleChoiceAnswers("Skin", false),
+        MultipleChoiceAnswers("Heart", false)
+    )
+
+
+    //    Who made the third most 3-pointers in the Playoffs in NBA history?
+    val list7 = mutableListOf<MultipleChoiceAnswers>(
+        MultipleChoiceAnswers("Stephen Curry", true),
+        MultipleChoiceAnswers("Ray Allen", false),
+        MultipleChoiceAnswers("Klay Thompson", false),
+        MultipleChoiceAnswers("LeBron James", false)
+    )
+
+
+    //    Which of these EU countries does not use the euro as its currency?
+    val list8 = mutableListOf<MultipleChoiceAnswers>(
+        MultipleChoiceAnswers("Poland", false),
+        MultipleChoiceAnswers("Denmark", false),
+        MultipleChoiceAnswers("Sweden", false),
+        MultipleChoiceAnswers("All of the above", true)
+    )
+
+    //    Which US city is the sunniest major city and sees more than 320 sunny days each year?
+    val list9 = mutableListOf<MultipleChoiceAnswers>(
+        MultipleChoiceAnswers("Phoenix", true),
+        MultipleChoiceAnswers("Miami", false),
+        MultipleChoiceAnswers("San Francisco", false),
+        MultipleChoiceAnswers("Austin", false)
+    )
+
+    //    Which fast food restaurant has the largest number of retail locations in the world?
+    val list10 = mutableListOf<MultipleChoiceAnswers>(
+        MultipleChoiceAnswers("Jack In The Box", false),
+        MultipleChoiceAnswers("Chipotle", false),
+        MultipleChoiceAnswers("Subway", false),
+        MultipleChoiceAnswers("McDonald's", true)
+    )
+
     private val questionList = listOf<MultipleChoiceQuestion>(
         MultipleChoiceQuestion("How many Infinity Stones are there?", list1),
         MultipleChoiceQuestion("What is the only food that cannot go bad?", list2),
-        MultipleChoiceQuestion("Which was René Magritte’s first surrealist painting?", list3),
-        MultipleChoiceQuestion("What 90s boy band member bought Myspace in 2011?", list4)
+        MultipleChoiceQuestion("What is the highest-grossing video game franchise to date?", list3),
+        MultipleChoiceQuestion("What 90s boy band member bought Myspace in 2011?", list4),
+        MultipleChoiceQuestion("What is the most visited tourist attraction in the world?", list5),
+        MultipleChoiceQuestion("What’s the heaviest organ in the human body?", list6),
+        MultipleChoiceQuestion("Who made the third most 3-pointers in the Playoffs in NBA history?", list7),
+        MultipleChoiceQuestion("Which of these EU countries does not use the euro as its currency?", list8),
+        MultipleChoiceQuestion("Which US city is the sunniest major city and sees more than 320 sunny days each year?", list9),
+        MultipleChoiceQuestion("Which fast food restaurant has the largest number of retail locations in the world?", list10),
     )
 
 
@@ -173,3 +232,4 @@ class MultipleRadioButtons: AppCompatActivity() {
         finish()
     }
 }
+

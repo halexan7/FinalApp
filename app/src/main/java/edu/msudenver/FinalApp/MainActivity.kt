@@ -1,6 +1,7 @@
 package edu.msudenver.FinalApp
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -27,7 +28,6 @@ class MainActivity : AppCompatActivity() {
 
         //use ArrayAdapter to add items to spinner
         spin.adapter = ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, gameTypes)
-
 
         //initialize start game button
         //start activity and send the name with it

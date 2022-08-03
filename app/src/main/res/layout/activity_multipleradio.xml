@@ -3,45 +3,59 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#607d8b">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/MultipleRadioQuestion"
-        android:textSize="40dp"/>
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:paddingBottom="20dp"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/radioGroup">
+        android:id="@+id/radioGroup"
+        android:paddingBottom="15dp">
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioBtnOne"/>
+            android:id="@+id/radioBtnOne"
+            android:textColor="#ffffff"
+            android:textSize="20dp"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioBtnTwo"/>
+            android:id="@+id/radioBtnTwo"
+            android:textColor="#ffffff"
+            android:textSize="20dp"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioBtnThree"/>
+            android:id="@+id/radioBtnThree"
+            android:textColor="#ffffff"
+            android:textSize="20dp"/>
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/radioBtnFour"/>
+            android:id="@+id/radioBtnFour"
+            android:textColor="#ffffff"
+            android:textSize="20dp"/>
     </RadioGroup>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submit"
-        android:id="@+id/MultipleRadioSubmit"/>
+        android:id="@+id/MultipleRadioSubmit"
+        android:textColor="#ffffff"
+        android:textSize="25dp"/>
 
     <TextView
         android:id="@+id/multipleRadioTick"
