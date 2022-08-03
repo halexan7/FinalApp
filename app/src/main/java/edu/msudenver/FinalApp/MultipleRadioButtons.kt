@@ -62,6 +62,8 @@ class MultipleRadioButtons: AppCompatActivity() {
 
         val playerName = intent.getStringExtra("name")
 
+        var count: Double
+
         val dbHelper = DBHelper(this)
         db = dbHelper.writableDatabase
 
@@ -75,14 +77,14 @@ class MultipleRadioButtons: AppCompatActivity() {
 
         btnSubmit = findViewById(R.id.MultipleRadioSubmit)
         btnSubmit.setOnClickListener(){
-            checkAnswer()
+            count = checkAnswer().toDouble()
             currentIndex++
-            if (currentIndex == questionList.size - 1){
+            if (currentIndex == questionList.size){
                 if (playerName != null) {
-                    endGame((correct / questionList.size).toDouble(), playerName)
+                    endGame((count / questionList.size).toDouble(), playerName)
                 }
                 else
-                    endGame((correct / questionList.size).toDouble(), "No Name Provided")
+                    endGame((count / questionList.size).toDouble(), "No Name Provided")
             }
             else{
                 updateQuestion()
@@ -107,7 +109,7 @@ class MultipleRadioButtons: AppCompatActivity() {
             radioBtnFour.setText(questionList[currentIndex].answer[3].answer)
     }
 
-    private fun checkAnswer(){
+    private fun checkAnswer(): Int {
         radioBtnOne = findViewById(R.id.radioBtnOne)
         radioBtnTwo = findViewById(R.id.radioBtnTwo)
         radioBtnThree = findViewById(R.id.radioBtnThree)
@@ -145,6 +147,7 @@ class MultipleRadioButtons: AppCompatActivity() {
             else
                 Toast.makeText(this, "$correct / ${currentIndex + 1}", Toast.LENGTH_SHORT).show()
         }
+        return correct
     }
 
     private fun endGame(score: Double, name: String){

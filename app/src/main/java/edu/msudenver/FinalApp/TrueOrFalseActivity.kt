@@ -32,12 +32,13 @@ class TrueOrFalseActivity: AppCompatActivity() {
     private var currentIndex = 0
     private var correct = 0
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trueorfalse)
 
         val playerName = intent.getStringExtra("name")
+
+        var count: Double
 
         val dbHelper = DBHelper(this)
         db = dbHelper.writableDatabase
@@ -50,13 +51,13 @@ class TrueOrFalseActivity: AppCompatActivity() {
 
         tofbtnSubmit = findViewById(R.id.tofbtnSubmit)
         tofbtnSubmit.setOnClickListener() {
-            checkAnswer()
+            count = checkAnswer().toDouble()
             currentIndex++
             if (currentIndex == questionList.size) {
                 if (playerName != null) {
-                    endGame((correct / questionList.size).toDouble(), playerName)
+                    endGame((count / questionList.size).toDouble(), playerName)
                 } else
-                    endGame((correct / questionList.size).toDouble(), "No Name Provided")
+                    endGame((count / questionList.size).toDouble(), "No Name Provided")
             } else {
                 updateQuestion()
             }
@@ -73,7 +74,7 @@ class TrueOrFalseActivity: AppCompatActivity() {
         trueOrFalseQuestion.text = questionText
     }
 
-    private fun checkAnswer(){
+    private fun checkAnswer(): Int {
         checkboxTrue = findViewById(R.id.checkboxTrue)
         checkBoxFalse = findViewById(R.id.checkboxFalse)
 
@@ -93,6 +94,7 @@ class TrueOrFalseActivity: AppCompatActivity() {
             else
                 Toast.makeText(this, "$correct / ${currentIndex + 1}", Toast.LENGTH_SHORT).show()
         }
+        return correct
     }
 
     private fun endGame(score: Double, name: String){
